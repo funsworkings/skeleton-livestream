@@ -68,7 +68,7 @@ public class InputManager : MonoBehaviour
         begin = v;
 
         ray = Camera.main.ScreenPointToRay(v);
-        hit = new RaycastHit();;
+        hit = new RaycastHit();
 
         if (Physics.Raycast(ray, out hit, mask))
         {
@@ -146,4 +146,16 @@ public class InputManager : MonoBehaviour
             return hit;
         }
     }
+
+	public Vector3 Begin{
+		get{
+			return begin;
+		}
+	}
+
+	public Vector3 End{
+		get{
+			return end;
+		}
+	}
 }
